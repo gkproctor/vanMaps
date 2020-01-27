@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -5,9 +6,11 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  this is a repo for github pages
+
+https://gkproctor.github.io/vanMaps/ This is the repo for vanMaps, crew van navigation assistance.
 </h1>
-modified with gatsby-source-filesystem, gatsby-transformer-excel,gatsby-plugin-react-helmet react-helmet. In order to use graphQL and also to be able use an excel spreadsheet for data.
+modified with gatsby-source-filesystem, gatsby-source-google-sheet, gatsby-plugin-react-helmet react-helmet. In order to use graphQL and also to be able use data from google sheets
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
@@ -96,3 +99,10 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+=======
+# github.io
+this is a repo for github pages
+
+https://gkproctor.github.io/vanMaps/
+This is the repo for vanMaps, crew van navigation assistance.
+>>>>>>> 1bd63088ea653b4215d123441beab17e35c18c66
