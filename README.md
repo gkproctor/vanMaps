@@ -7,6 +7,7 @@
 <h1 align="center">
   Gatsby's hello-world starter
 </h1>
+modified with gatsby-source-filesystem, gatsby-transformer-excel,gatsby-plugin-react-helmet react-helmet. In order to use graphQL and also to be able use an excel spreadsheet for data.
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
