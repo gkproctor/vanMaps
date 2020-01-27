@@ -7,6 +7,9 @@
 <h1 align="center">
   This is the repo for vanMaps, crew van navigation assistance.
 </h1>
+<h3>
+  Helping van drivers find the train and pick-up the crew.
+</h3>
 Starter has been modified with gatsby-source-google-sheet and gatsby-plugin-material-ui. In order to use data from google sheets
 
 This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
