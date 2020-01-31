@@ -58,8 +58,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Van Maps navigation assistance`,
+        short_name: `Van Maps`,
         start_url: `/`,
         background_color: `#6b37bf`,
         theme_color: `#6b37bf`,
