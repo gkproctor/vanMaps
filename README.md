@@ -3,7 +3,6 @@
 <a href="https://www.vanmaps.net">
     <img alt="Van Maps" src="https://raw.githubusercontent.com/gkproctor/vanMaps/master/src/images/mapOverview.png" width="60" />
   </a>
-</p>
 <h1 align="center">
   Crew-van navigation assistance.
 </h1>
