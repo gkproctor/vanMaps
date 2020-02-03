@@ -1,18 +1,31 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: `Van Maps`,
     description: `Van Maps is a collection of crew change points and locations where crews use vans to expedite their work.  The source file contains, location, channel, directions for access road navigation, google embeded link for google maps.`,
-    author: `gk proctor`,
+    keywords: `Los Angeles, train, crew, Renzenberger, Hallcon, navigation, locations, pick-up, drop-off, dog-catch, patch, Southern California, van maps`,
+    author: `gk proctor`
   },
   plugins: [
-    // With this plugin, attributes you add in their component, e.g. title, meta attributes, etc. will get added to the static HTML pages Gatsby builds
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `gatsby-tailwind--serif`,
+        short_name: `serif`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#4dc0b5`,
+        display: `minimal-ui`,
+        icon: `static/favicon.png`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content`,
+        name: 'services'
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,35 +40,25 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    'gatsby-transformer-remark',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-postcss',
     {
-      resolve: `gatsby-plugin-material-ui`,
+      resolve: "gatsby-plugin-purgecss",
       options: {
-        theme: {
-          // material-ui theme
-          palette: {
-            primary: {
-              main: "#BA3D3B", // or whatever colors you need
-            },
-          },
-        },
-      },
+        tailwind: true,
+        purgeOnly: ["src/css/style.css"]
+      }
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-google-sheet`,
       options: {
         spreadsheetKey: `1OUTeP7jW79sII7TB6-QNlfg0azjzQXp28kofOLiXKrI`,
         rootName: "RootName", // default is Sheet
       },
-    },
-    {
+    }, {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Van Maps navigation assistance`,
@@ -68,7 +71,6 @@ module.exports = {
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
-    },
-    `gatsby-plugin-offline`,
-  ],
-}
+    }
+  ]
+};

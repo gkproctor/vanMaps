@@ -1,50 +1,25 @@
-import React from "react"
-import { css } from "@emotion/core"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import { rhythm } from "../utils/typography"
+import React from "react";
+import Helmet from "react-helmet";
 
-export default ({ children }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  )
+import Header from "./header";
+import Footer from "./footer";
+import SEO from './seo'
+import "../css/style.css";
+
+const Layout = ({ className, headerClass, bodyClass, children, ...props }) => {
+  bodyClass = bodyClass || "container mx-auto px-6 md:px-10 lg:px-16";
   return (
-    <div
-      css={css`
-        margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.0)};
-      `}
-    >
-      <Link to={`/`}>
-        <h2
-          css={css`
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h2>
-      </Link>
-      <Link to={`/locations/`}>
-        <h4
-        css={css`
-          color: red;
-          float: right;
-        `}
-      >
-        Location Index
-        </h4>
-      </Link>
-      {children}
+    <div className={className} {...props}>
+      <SEO/>
+      <Helmet>
+        <body className="font-sans antialiased" />
+      </Helmet>
+
+      <Header className={headerClass} />
+      <div className={bodyClass}>{children}</div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
+
+export default Layout;

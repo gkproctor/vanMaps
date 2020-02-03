@@ -1,49 +1,75 @@
 {
   "name": "Van Maps",
-  "private": true,
-  "description": "Van driver navigation assistance",
-  "version": "1.0.3",
+  "description": "Gatsby starter styled with Tailwind with gatsby-source-google-sheet added",
+  "version": "1.1.0",
+  "author": "gkproctor",
+  "build": "npm build",
+  "clean": "rm -rf node_modules",
+  "reinstall": "npm run clean && npm install",
+  "rebuild": "npm run clean && npm install && npm run build",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.9.11",
+    "gatsby-image": "^2.2.3",
+    "gatsby-plugin-manifest": "^2.2.0",
+    "gatsby-plugin-offline": "^2.2.0",
+    "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-purgecss": "^4.0.0",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.1",
+    "gatsby-source-filesystem": "^2.1.1",
+    "gatsby-source-google-sheet": "^2.0.0",
+    "gatsby-transformer-remark": "^2.5.0",
+    "gatsby-transformer-sharp": "^2.2.0",
+    "graphql": "^14.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  },
+  "keywords": [
+    "gatsby",
+    "tailwind",
+    "tailwindcss",
+    "purgecss"
+  ],
   "license": "MIT",
   "scripts": {
+    "analyze:lint": "eslint --ext .jsx --ext .js .",
+    "analyze:prettier": "prettier --list-different '**/*.{js,css,md,json}'",
+    "analyze": "npm run analyze:lint && npm run analyze:prettier",
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "fix:lint": "eslint --ext .jsx --ext .js . --fix",
+    "fix:prettier": "prettier --write '**/*.{js,css,md,json}'",
+    "fix": "npm run fix:lint && npm run fix:prettier",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.27",
-    "@material-ui/styles": "^4.9.0",
-    "gatsby": "^2.18.12",
-    "gatsby-plugin-emotion": "^4.1.21",
-    "gatsby-plugin-manifest": "^2.2.38",
-    "gatsby-plugin-material-ui": "^2.1.6",
-    "gatsby-plugin-offline": "^3.0.32",
-    "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-typography": "^2.3.21",
-    "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-source-google-sheet": "^2.0.0",
-    "gatsby-transformer-excel": "^2.2.20",
-    "gatsby-transformer-json": "^2.2.25",
-    "gatsby-transformer-remark": "^2.6.48",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.16.0",
+    "eslint-config-react-app": "^4.0.1",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^1.6.1",
+    "prettier": "^1.18.2",
+    "tailwindcss": "^1.1.1",
+    "tailwindcss-transforms": "^2.1.0"
   },
-  "repository": {
+  "Repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://gkproctor.github.io/vanMaps/"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "bugs": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "resolutions": {
+    "terser": "4.0.0",
+    "terser-webpack-plugin/terser": "4.0.0"
   }
 }

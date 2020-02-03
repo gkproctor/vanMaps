@@ -1,6 +1,8 @@
 ---
-title: "Info"
-date: "2019-11-16"
+path: "/services/info"
+title: "Information"
+date: 2020-02-02T12:33:46+10:00
+image: "../../src/images/mapOverview.png"
 ---
 
 These directions will only get you to the city street turn out. Once there you will need to find your way to the train using the access road. Your navigation app will not work on dirt roads, see the directions in the 3rd column to get you to the train. Your safety is your responsibility.
