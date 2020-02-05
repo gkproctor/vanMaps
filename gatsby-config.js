@@ -58,7 +58,8 @@ module.exports = {
         spreadsheetKey: `1OUTeP7jW79sII7TB6-QNlfg0azjzQXp28kofOLiXKrI`,
         rootName: "RootName", // default is Sheet
       },
-    }, {
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Van Maps navigation assistance`,
