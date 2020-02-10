@@ -1,41 +1,35 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
+import { Card, Button } from "react-bootstrap"
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Locations = ({ data }) => {
+const aMaps = ({ data }) => {
   const locations = data.allGoogleSheetRootName.edges;
 
   return (
-    <Layout headerClass="bg-white relative">
-      <SEO title="Locations" />
-
-      <div
-        className="min-h-screen pt-20 sm:pt-22 md:pt-28 -mt-12 sm:-mt-8 md:-mt-18 lg:-mt-28 mb-20 bg-size-5/6 md:bg-size-4/5 lg:bg-size-2/3 bg-right-top bg-no-repeat flex flex-col items-center"
-      >
-        <div className="container w-3/4 md:w-1/2 mt-3 font-serif font-hairline self-start">
-          <h1 className="text-4xl md:text-4xl text-green-700 px-2">
-            Locations
-          </h1>
-        </div>
-        <div className="flex flex-wrap mt-5 md:mt-10">
+    <Layout pageInfo={{ pageName: "aMaps" }}>
+      <SEO title="aMaps" />
+      <h3>
+        Locations
+          </h3>
+        <div>
           {locations.map(({ node }) => (
             <div key={node.googleSheetId}>
-              <h3 className="text-xl pt-5">
-                <strong>
-                  <a href={node.applemapslink}>{node.location}</a>{" "}
-                </strong>
-                <div className="text-sm">
-                  — Radio Channel {node.channel}
-                </div>
-              </h3>
-              <h5>
-                Once you arrive: {node.endingdirections}
-              </h5>
+              <Card>
+                <Card.Header><h5>{node.location}{" "}</h5></Card.Header>
+                <Card.Body>
+                  <Card.Title>Radio Channel {node.channel}</Card.Title>
+                  <Card.Text>
+                    {node.endingdirections}{" "}<Button variant="outline-primary"><a href={node.googlenavigationlink}>Let's Go!</a></Button>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+              <br />
             </div>
           ))}
         </div>
-      </div>
     </Layout>
   );
 };
@@ -46,14 +40,14 @@ export const query = graphql`
     edges {
       node {
         id
-        applemapslink
         channel
         endingdirections
         location
+        applemapslink
       }
     }
   }
 }
 `;
 
-export default Locations;
+export default aMaps;

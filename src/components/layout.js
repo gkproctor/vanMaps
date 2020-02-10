@@ -1,25 +1,62 @@
-import React from "react";
-import Helmet from "react-helmet";
+/**
+ * Layout component that queries for data
+ * with Gatsby's StaticQuery component
+ *
+ * See: https://www.gatsbyjs.org/docs/static-query/
+ */
 
-import Header from "./header";
-import Footer from "./footer";
-import SEO from './seo'
-import "../css/style.css";
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
-const Layout = ({ className, headerClass, bodyClass, children, ...props }) => {
-  bodyClass = bodyClass || "container mx-auto px-6 md:px-10 lg:px-16";
-  return (
-    <div className={className} {...props}>
-      <SEO/>
-      <Helmet>
-        <body className="font-sans antialiased" />
-      </Helmet>
+import { Container, Row, Col } from "react-bootstrap"
 
-      <Header className={headerClass} />
-      <div className={bodyClass}>{children}</div>
-      <Footer />
-    </div>
-  );
-};
+import Header from "./header"
+import Navbar from "./navBar"
 
-export default Layout;
+const Layout = ({ children, pageInfo }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Container fluid className="px-0 main">
+          <Row noGutters className="justify-content-center">
+            <Col>
+              <Header siteTitle={data.site.siteMetadata.title} />
+            </Col>
+          </Row>
+          <Navbar pageInfo={pageInfo} />
+          <Row noGutters>
+            <Col>
+              <Container className="mt-5">
+                <main>{children}</main>
+              </Container>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid className="px-0">
+          <Row noGutters>
+            <Col className="footer-col">
+              <footer>
+                <span>
+                  © {new Date().getFullYear()}, Built by Gary Proctor with
+                  {` `}
+                  <a href="https://www.gatsbyjs.org">Gatsby</a>
+                </span>
+              </footer>
+            </Col>
+          </Row>
+        </Container>
+      </>
+    )}
+  />
+)
+
+export default Layout

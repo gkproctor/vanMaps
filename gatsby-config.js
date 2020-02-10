@@ -1,36 +1,19 @@
 module.exports = {
+  pathPrefix: "/gatsby-react-bootstrap-starter",
   siteMetadata: {
     title: `Van Maps`,
     description: `Van Maps is a collection of crew change points and locations where crews use vans to expedite their work.  The source file contains, location, channel, directions for access road navigation, google embeded link for google maps.`,
     keywords: `Los Angeles, train, crew, Renzenberger, Hallcon, navigation, locations, pick-up, drop-off, dog-catch, patch, Southern California, van maps`,
-    author: `gk proctor`
+    author: `Gary Proctor`,
+    siteUrl: `https://vanmaps.net`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-tailwind--serif`,
-        short_name: `serif`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#4dc0b5`,
-        display: `minimal-ui`,
-        icon: `static/favicon.png`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content`,
-        name: 'services'
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -40,18 +23,14 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
-    'gatsby-transformer-remark',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-postcss',
+    `gatsby-transformer-remark`,
     {
-      resolve: "gatsby-plugin-purgecss",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        tailwind: true,
-        purgeOnly: ["src/css/style.css"]
-      }
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
     },
-    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-google-sheet`,
       options: {
@@ -59,19 +38,22 @@ module.exports = {
         rootName: "RootName", // default is Sheet
       },
     },
+    `gatsby-plugin-sass`,
+    // `gatsby-transformer-json`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Van Maps navigation assistance`,
         short_name: `Van Maps`,
         start_url: `/`,
-        background_color: `#6b37bf`,
-        theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: `standalone`,
+        background_color: `#20232a`,
+        theme_color: `#20232a`,
+        display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
-    }
-  ]
-};
+    },
+    `gatsby-plugin-offline`,
+  ],
+}

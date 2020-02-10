@@ -1,5 +1,5 @@
 ---
-path: "/services/info"
+path: "/content/info"
 title: "Information"
 date: 2020-02-02T12:33:46+10:00
 image: "../src/images/mapOverview.png"
