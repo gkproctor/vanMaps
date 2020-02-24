@@ -17,7 +17,7 @@ const aMaps = ({ data }) => {
           <div key={node.allVanmapsCsv}>
             <Card>
               <Card.Header>
-                <h5>{node.location} </h5>
+                <h5>{node.Location} </h5>
               </Card.Header>
               <Card.Body>
                 <Card.Title>Radio Channel {node.channel}</Card.Title>
