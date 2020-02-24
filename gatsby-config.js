@@ -5,7 +5,7 @@ module.exports = {
     description: `Van Maps is a collection of crew change points and locations where crews use vans to expedite their work.  The source file contains, location, channel, directions for access road navigation, google embeded link for google maps.`,
     keywords: `Los Angeles, train, crew, Renzenberger, Hallcon, navigation, locations, pick-up, drop-off, dog-catch, patch, Southern California, van maps`,
     author: `Gary Proctor`,
-    siteUrl: `https://vanmaps.net`
+    siteUrl: `https://vanmaps.net`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,15 +24,15 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    `gatsby-transformer-csv`,
     {
-      resolve: `gatsby-source-google-sheet`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spreadsheetKey: `1OUTeP7jW79sII7TB6-QNlfg0azjzQXp28kofOLiXKrI`,
-        rootName: "RootName", // default is Sheet
+        name: `data`,
+        path: `${__dirname}/src/data/`,
       },
     },
     `gatsby-plugin-sass`,
-    // `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

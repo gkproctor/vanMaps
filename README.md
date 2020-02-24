@@ -11,7 +11,6 @@ A GatsbyJS starter that includes
 - sticky on scroll navbar
 - SASS compiler
 - basic layout
-- gatsby-source-google-sheet plugin
 
 The gatsby-react-bootstrap-starter was created by Billy Jacoby and then modified by Gary Proctor to use gatsby-source-google-sheet plugin.
 
