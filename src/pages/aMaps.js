@@ -20,7 +20,7 @@ const aMaps = ({ data }) => {
                 <h5>{node.Location} </h5>
               </Card.Header>
               <Card.Body>
-                <Card.Title>Radio Channel {node.channel}</Card.Title>
+                <Card.Title>Radio Channel {node.Channel}</Card.Title>
                 <Card.Text>
                   {node.ending_directions}{" "}
                   <Button variant="outline-primary">
