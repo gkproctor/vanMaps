@@ -22,9 +22,9 @@ const aMaps = ({ data }) => {
               <Card.Body>
                 <Card.Title>Radio Channel {node.Channel}</Card.Title>
                 <Card.Text>
-                  {node.ending_directions}{" "}
+                  {node.EndingDirections}{" "}
                   <Button variant="outline-primary">
-                    <a href={node.AppleMapsLink}>Let's Go!</a>
+                    <a href={node.AppleMaps}>Let's Go!</a>
                   </Button>
                 </Card.Text>
               </Card.Body>
@@ -43,10 +43,10 @@ export const query = graphql`
       edges {
         node {
           id
-          AppleMapsLink
+          AppleMaps
           Channel
           Location
-          ending_directions
+          EndingDirections
         }
       }
     }

@@ -22,9 +22,9 @@ const gNav = ({ data }) => {
               <Card.Body>
                 <Card.Title>Radio Channel {node.Channel}</Card.Title>
                 <Card.Text>
-                  {node.ending_directions}{" "}
+                  {node.EndingDirections}{" "}
                   <Button variant="outline-success">
-                    <a href={node.GoogleMapsLink}>Let's Go!</a>
+                    <a href={node.GoogleMaps}>Let's Go!</a>
                   </Button>
                 </Card.Text>
               </Card.Body>
@@ -44,8 +44,8 @@ export const query = graphql`
         node {
           Channel
           Location
-          ending_directions
-          GoogleMapsLink
+          EndingDirections
+          GoogleMaps
         }
       }
     }
