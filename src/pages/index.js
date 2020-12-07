@@ -31,11 +31,11 @@ function Index({ data }) {
             Helping drivers get to the train location to pick-up the crew.
           </h3>
           <p>
-            Select the navigation app that you use.
+            Select the navigation app that you use.  Google Maps is preferred and more accurate.
           </p>
         </div>
         <Card>
-            <Card.Header><Link to="/gNav">Google Navigation</Link></Card.Header>
+            <Card.Header><Link to="/gNav">Google Maps</Link></Card.Header>
           <Card.Body>
             <Row>
               <Col xs={8}><Card.Title><Container>If you don't know which navigation app to use then select this if you have an Android phone.</Container></Card.Title></Col>
