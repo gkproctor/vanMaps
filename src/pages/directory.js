@@ -14,13 +14,13 @@ const directory = ({ data }) => {
         {newObject.map(({ node }) => (
           <div key={node.allVanmapsCsv}>
             <ul>&#123;
-              <ul>"_id": "{node.ID}"</ul>
-              <ul>"name": "{node.Location}"</ul>
-              <ul>"radioChannel": "{node.Channel}"</ul>
-              <ul>"additionalInfo": "{node.EndingDirections}"</ul>
-              <ul>"googleMapsURL": "{node.GoogleMaps}"</ul>
-              <ul>"appleMapsURL": "{node.AppleMaps}"</ul>
-              <ul>"coordinates": "{node.Coordinates}"</ul>
+              <ul>"_id": "{node.ID}",</ul>
+              <ul>"name": "{node.Location}",</ul>
+              <ul>"radioChannel": "{node.Channel}",</ul>
+              <ul>"additionalInfo": "{node.EndingDirections}",</ul>
+              <ul>"googleMapsURL": "{node.GoogleMaps}",</ul>
+              <ul>"appleMapsURL": "{node.AppleMaps}",</ul>
+              <ul>"coordinates": "{node.Coordinates}",</ul>
             &#125;,
             </ul>
           </div>
