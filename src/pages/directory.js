@@ -10,25 +10,22 @@ const directory = ({ data }) => {
   return (
     <Layout pageInfo={{ pageName: "gNav" }}>
       <SEO title="gNav" />
-      <div>&#123;</div>
-      <p>"New Object":</p>
       <div>
         {newObject.map(({ node }) => (
           <div key={node.allVanmapsCsv}>
             <ul>&#123;
-              <ul>"ID": "{node.ID}"</ul>
-              <ul>"Name": "{node.Location}"</ul>
-              <ul>"Radio Channel": "{node.Channel}"</ul>
-              <ul>"Directions": "{node.EndingDirections}"</ul>
-              <ul>"GoogleMaps URL": "{node.GoogleMaps}"</ul>
-              <ul>"AppleMaps URL": "{node.AppleMaps}"</ul>
-              <ul>"Coordinates": "{node.Coordinates}"</ul>
+              <ul>"_id": "{node.ID}"</ul>
+              <ul>"name": "{node.Location}"</ul>
+              <ul>"radioChannel": "{node.Channel}"</ul>
+              <ul>"additionalInfo": "{node.EndingDirections}"</ul>
+              <ul>"googleMapsURL": "{node.GoogleMaps}"</ul>
+              <ul>"appleMapsURL": "{node.AppleMaps}"</ul>
+              <ul>"coordinates": "{node.Coordinates}"</ul>
             &#125;,
             </ul>
           </div>
         ))}
       </div>
-      <div>&#125;</div>
     </Layout>
   )
 };
