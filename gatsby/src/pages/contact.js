@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { navigate } from 'gatsby-link'
 import SEO from '../components/SEO';
 
 function encode(data) {
@@ -8,7 +9,7 @@ function encode(data) {
 }
 
 export default function ContactPage() {
-  const [state, setState] = React.useState({});
+  const [state, setState] = useState({});
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
@@ -26,7 +27,7 @@ export default function ContactPage() {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error));
+      .catch((error) => console.log(error));
   };
 
   return (
