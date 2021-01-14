@@ -27,7 +27,7 @@ export default function ContactPage() {
       }),
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error));
   };
 
   return (
@@ -38,15 +38,15 @@ export default function ContactPage() {
         method="post"
         action="/thanks/"
         data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        data-netlify-honeypot="clownsOnly"
         onSubmit={handleSubmit}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
-            Don’t fill this out:{' '}
-            <input name="bot-field" onChange={handleChange} />
+            You're a sucker!!:{' '}
+            <input name="clownsOnly" onChange={handleChange} />
           </label>
         </p>
         <p>
