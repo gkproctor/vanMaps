@@ -53,21 +53,34 @@ export default function ContactPage() {
           <label>
             Your name:
             <br />
-            <input type="text" name="name" onChange={handleChange} />
+            <input type="text" name="name" onChange={handleChange} required />
           </label>
         </p>
         <p>
           <label>
             Your email:
             <br />
-            <input type="email" name="email" onChange={handleChange} />
+            <input type="email" name="email" onChange={handleChange} required />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Role:{' '}
+            {/* this div was added to change the format of the page */}
+            <div>
+              <select name="role[]" multiple required>
+                <option value="leader">Driver</option>
+                <option value="follower">Crew</option>
+                <option value="follower">Other</option>
+              </select>
+            </div>
           </label>
         </p>
         <p>
           <label>
             Message:
             <br />
-            <textarea name="message" onChange={handleChange} />
+            <textarea name="message" onChange={handleChange} required />
           </label>
         </p>
         <p>
