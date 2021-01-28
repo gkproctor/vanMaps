@@ -15,7 +15,7 @@ export default function LocationsPage({ data }) {
 // This query works but does NOT return list in alphabetical order
 export const query = graphql`
   query LocationQuery {
-    locations: allSanityLocation {
+    locations: allSanityLocation(sort: {fields: name, order: ASC}) {
       nodes {
         name
         id
