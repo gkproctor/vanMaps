@@ -20,11 +20,6 @@ const CustomNavbar = ({ pageInfo }) => {
                 Google Navigation
               </Nav.Link>
             </Link>
-            <Link to="/aMaps" className="link-no-style">
-              <Nav.Link as="span" eventKey="aMaps">
-                Apple Maps
-              </Nav.Link>
-            </Link>
             <Link to="/about" className="link-no-style">
               <Nav.Link as="span" eventKey="about">
                 About

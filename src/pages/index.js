@@ -49,14 +49,11 @@ function Index({ data }) {
         </Card>
         <br />
         <Card>
-          <Card.Header><Link to="/aMaps">Apple Maps</Link></Card.Header>
+          <Card.Header>Apple Maps - no longer available. Please use Google Maps</Card.Header>
           <Card.Body>
             <Row>
-              <Col xs={8}><Card.Title><Container>If you don't know which navigation app to use then select this if you have an Iphone.</Container></Card.Title></Col>
+              <Col xs={8}><Card.Title><Container>I had to delete the Apple Maps link because it was inaccurate and not navigating to the exact location.</Container></Card.Title></Col>
               <Col xs={4}><Card.Text>
-                <Link to="/aMaps">
-                  <img alt="Apple" src={ios} />
-                </Link>
               </Card.Text></Col>
             </Row>
           </Card.Body>
